@@ -12,7 +12,7 @@ const FlowerServicesCard = () => {
         source={require("../../assets/Icon/love.png")}
         className="w-[17px] h-[16px] absolute top-[10px] right-[10px]  "
       />
-      <View className="flex flex-col justify-center text-center items-center">
+      <View className="flex flex-col justify-center text-center items-center mb-[4px]">
         <Text className="text-[10px] font-interBold text-main-200">
           Звездопад
         </Text>
