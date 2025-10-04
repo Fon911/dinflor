@@ -239,12 +239,12 @@ const flowerShop = () => {
                 в коробках и корзинах , широкий ассортимент мягких игрушек.
               </Text>
               <View className="w-full items-center mt-4">
-                <View className="flex-row border border-main-200 h-[27px] w-[300px] items-center rounded-md overflow-hidden">
+                <View className="flex-row border border-main-200 h-[27px] w-[300px] rounded-md overflow-hidden">
                   {/* Доставка */}
                   <TouchableOpacity
                     activeOpacity={1}
                     onPress={() => setActive("delivery")}
-                    className={`flex-1 py-[2px] items-center ${
+                    className={`flex-1 h-full items-center justify-center ${
                       active === "delivery" ? "bg-main-200" : "bg-white"
                     }`}
                   >
@@ -261,7 +261,7 @@ const flowerShop = () => {
                   <TouchableOpacity
                     activeOpacity={1}
                     onPress={() => setActive("pickup")}
-                    className={`flex-1 py-[2px] items-center ${
+                    className={`flex-1 h-full items-center justify-center ${
                       active === "pickup" ? "bg-main-200" : "bg-white"
                     }`}
                   >
