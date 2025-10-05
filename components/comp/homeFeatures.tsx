@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
-import AllFlowers from "../cards/allflowersTsx";
 import FeaturesCard from "../cards/FeaturesCard";
 import FlowerCard from "../cards/FlowerCard";
 import RoundCard from "../cards/RoundCard";
 import ServicesCard from "../cards/ServicesCard";
 import ShopCard from "../cards/ShopCard";
 import Categorylayout from "../layout/Categorylayout";
+import AllFlowers from "../modules/allflowersTsx";
 
 const HomeFeatures = () => {
   const featuresData = [

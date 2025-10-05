@@ -6,7 +6,7 @@ import CustomButton from "../ui/CustomButton";
 const Help = () => {
   return (
     <View className="flex-1">
-      <View className="mx-[15px]">
+      <View className="mx-[15px] flex-1">
         <View>
           <Text className="text-[16px] font-interSemiBold">
             Защита покупателя
@@ -21,12 +21,13 @@ const Help = () => {
                 source={require("@/assets/Icon/supportpeople.png")}
                 className="w-[14px] h-[11px]"
               />
-              <Text className="text-[10px] text-[#00000080] font-interMedium">
+              <Text className="text-[10px] text-[#00000080] font-interMedium ml-[4px]">
                 Пожаловаться на товар
               </Text>
             </View>
           </TouchableOpacity>
         </View>
+
         <View className="mt-[10px]">
           <Text className="text-[16px] font-interSemiBold">Правила отмены</Text>
           <Text className="text-[12px] font-interRegular mt-[3px]">
@@ -34,26 +35,31 @@ const Help = () => {
             полностью вам вернутся.
           </Text>
         </View>
+
         <View className="mt-[15px]">
           <Text className="text-[16px] font-interSemiBold">Задать вопрос</Text>
           <TextInput
-            className="w-[345px] mt-[10px] h-[147px] border border-main-100 rounded-lg px-3"
+            className="w-full mt-[10px] h-[147px] border border-main-100 rounded-lg px-3"
             placeholder="Ваш вопрос"
             scrollEnabled
             textAlignVertical="top"
           />
           <CustomButton
-            title="Вопрос по завершенному  заказу"
+            title="Вопрос по завершенному заказу"
             onPress={() => {}}
             className="mx-[28px] my-[15px]"
           />
         </View>
       </View>
-      <CustomButton
-        title="Отправить"
-        onPress={() => {}}
-        className="mx-[28px] my-[15px] absolute bottom-[15px] w-[172px] right-[29px]"
-      />
+
+      {/* Нижняя кнопка */}
+      <View className="absolute bottom-[15px] right-[15px]">
+        <CustomButton
+          title="Отправить"
+          onPress={() => {}}
+          className="w-[172px]"
+        />
+      </View>
     </View>
   );
 };

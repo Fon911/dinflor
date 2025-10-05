@@ -2,10 +2,10 @@ import { useNavigationState } from "@react-navigation/native";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
-import AllFlowers from "../cards/allflowersTsx";
 import FlowerServicesCard from "../cards/FlowerServicesCard";
 import ShopInfoCard from "../cards/ShopInfoCard";
 import AltCategory from "../layout/altCategory";
+import AllFlowers from "../modules/allflowersTsx";
 
 const flowerShop = () => {
   const router = useRouter();
