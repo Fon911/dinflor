@@ -1,15 +1,13 @@
+import Order from "@/components/comp/order";
 import GenLayout from "@/components/layout/Genlayout";
 import React from "react";
-import { Text, View } from "react-native";
 
-const Cart = () => {
+const order = () => {
   return (
     <GenLayout pageName="Мои Заказы" backArrow>
-      <View>
-        <Text>Мои Заказы</Text>
-      </View>
+      <Order />
     </GenLayout>
   );
 };
 
-export default Cart;
+export default order;

@@ -1,8 +1,11 @@
+import { useRouter } from "expo-router";
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Profile = () => {
   const name = "Даниил";
+
+  const router = useRouter();
 
   // массив пунктов меню
   const menuItems = [
@@ -17,7 +20,7 @@ const Profile = () => {
     {
       title: "Заказы",
       onPress: () => {
-        console.log("Открыть заказы");
+        router.push("/(profile)/order");
       },
     },
     {
@@ -60,6 +63,13 @@ const Profile = () => {
       title: "Акции",
       onPress: () => {
         console.log("Открыть акции");
+      },
+    },
+    {
+      title: "Помощь",
+
+      onPress: () => {
+        router.push("/(profile)/help");
       },
     },
     {

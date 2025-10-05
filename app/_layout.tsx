@@ -28,6 +28,7 @@ export default function App() {
       <Stack.Screen name="index" options={{ headerShown: false }} />
       <Stack.Screen name="(auth)" options={{ headerShown: false }} />
       <Stack.Screen name="(features)" options={{ headerShown: false }} />
+      <Stack.Screen name="(profile)" options={{ headerShown: false }} />
 
       <Stack.Screen name="(root)" options={{ headerShown: false }} />
     </Stack>
