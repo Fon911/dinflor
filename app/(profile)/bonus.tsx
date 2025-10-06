@@ -1,11 +1,12 @@
+import Bonus from "@/components/comp/bonus";
+import GenLayout from "@/components/layout/Genlayout";
 import React from "react";
-import { Text, View } from "react-native";
 
 const bonus = () => {
   return (
-    <View>
-      <Text>bonus</Text>
-    </View>
+    <GenLayout pageName="Бонусная программа" backArrow>
+      <Bonus />
+    </GenLayout>
   );
 };
 

@@ -14,7 +14,7 @@ const Profile = () => {
       icon: require("@/assets/Icon/bonusflower.png"),
       bonus: "100",
       onPress: () => {
-        console.log("Открыть бонусную программу");
+        router.push("/(profile)/bonus");
       },
     },
     {
