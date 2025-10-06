@@ -1,11 +1,12 @@
+import Waitlist from "@/components/comp/waitlist";
+import GenLayout from "@/components/layout/Genlayout";
 import React from "react";
-import { Text, View } from "react-native";
 
 const waitlist = () => {
   return (
-    <View>
-      <Text>waitlist</Text>
-    </View>
+    <GenLayout pageName="Лист ожидания" backArrow>
+      <Waitlist />
+    </GenLayout>
   );
 };
 

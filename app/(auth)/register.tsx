@@ -23,7 +23,7 @@ const register = () => {
         extraScrollHeight={40}
         keyboardShouldPersistTaps="handled"
       >
-        <View className="flex-1 w-full mt-5 ml-4 flex-col justify-between">
+        <View className="flex-1 w-full mt-5 px-[15px] flex-col justify-between">
           <View>
             <View>
               <CustomInput
@@ -88,7 +88,7 @@ const register = () => {
             <CustomButton
               title="Зарегистрироваться"
               onPress={() => {}}
-              className="mr-[20px] max-w-[345px] mt-[15px]"
+              className=" max-w-[345px] mt-[15px]"
             />
           </View>
         </View>

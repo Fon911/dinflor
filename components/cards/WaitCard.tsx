@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
-const FlowerServicesCard = () => {
+const WaitCard = () => {
   return (
     <View className="w-[169px] flex-col items-center">
       {/* Картинка с верхними скруглениями */}
@@ -27,12 +27,9 @@ const FlowerServicesCard = () => {
           </Text>
         </View>
         <View className="flex flex-row items-center gap-[12px] justify-center mb-[9px]">
-          <Text className="text-[12px] font-interBold text-main-100">
-            5990₽
-          </Text>
           <TouchableOpacity className="bg-main-200 px-[14px] py-[5px] rounded-[5px] ">
             <Text className="text-[12px] font-interRegular text-white">
-              Заказать
+              Отписаться от товара
             </Text>
           </TouchableOpacity>
         </View>
@@ -41,4 +38,4 @@ const FlowerServicesCard = () => {
   );
 };
 
-export default FlowerServicesCard;
+export default WaitCard;

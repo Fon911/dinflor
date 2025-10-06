@@ -26,45 +26,16 @@ const Profile = () => {
     {
       title: "Лист ожидания",
       onPress: () => {
-        console.log("Открыть лист ожидания");
+        router.push("/(profile)/waitlist");
       },
     },
     {
-      title: "Стать партнером",
+      title: "События",
       onPress: () => {
-        console.log("Открыть стать партнёром");
+        router.push("/(profile)/event");
       },
     },
-    {
-      title: "Валюта",
-      onPress: () => {
-        console.log("Открыть валюту");
-      },
-    },
-    {
-      title: "Язык",
-      onPress: () => {
-        console.log("Открыть язык");
-      },
-    },
-    {
-      title: "Уведомления",
-      onPress: () => {
-        console.log("Открыть уведомления");
-      },
-    },
-    {
-      title: "Вакансии",
-      onPress: () => {
-        console.log("Открыть вакансии");
-      },
-    },
-    {
-      title: "Акции",
-      onPress: () => {
-        console.log("Открыть акции");
-      },
-    },
+
     {
       title: "Помощь",
 

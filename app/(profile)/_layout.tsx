@@ -10,6 +10,7 @@ export default function _layout() {
       <Stack.Screen name="notice" options={{ headerShown: false }} />
       <Stack.Screen name="event" options={{ headerShown: false }} />
       <Stack.Screen name="help" options={{ headerShown: false }} />
+      <Stack.Screen name="newevent" options={{ headerShown: false }} />
     </Stack>
   );
 }

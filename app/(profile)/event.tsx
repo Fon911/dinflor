@@ -1,11 +1,12 @@
+import Event from "@/components/comp/event";
+import GenLayout from "@/components/layout/Genlayout";
 import React from "react";
-import { Text, View } from "react-native";
 
 const event = () => {
   return (
-    <View>
-      <Text>event</Text>
-    </View>
+    <GenLayout pageName="Мои События" backArrow>
+      <Event />
+    </GenLayout>
   );
 };
 

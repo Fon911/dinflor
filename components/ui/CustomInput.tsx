@@ -13,12 +13,16 @@ interface CustomInputProps {
   keyboardType?: "default" | "email-address" | "phone-pad" | "numeric";
   secureTextEntry?: boolean;
   style?: object;
+  editable?: boolean; // <-- добавляем сюда
+  onTouchStart?: () => void;
 }
 
 const CustomInput: React.FC<CustomInputProps> = ({
   label,
   value,
   onChangeText,
+  onTouchStart,
+  editable,
   keyboardType = "default",
   secureTextEntry = false,
   style,
@@ -52,6 +56,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
     <View style={[styles.container, style]}>
       <Animated.Text style={labelStyle}>{label}</Animated.Text>
       <RNTextInput
+        editable={editable ?? true}
         value={value}
         onChangeText={onChangeText}
         keyboardType={keyboardType}
@@ -59,6 +64,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         style={styles.input}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
+        onTouchStart={onTouchStart}
       />
     </View>
   );
@@ -67,7 +73,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
 const styles = StyleSheet.create({
   container: {
     marginTop: 12,
-    marginRight: 32,
+
     backgroundColor: "white",
     borderRadius: 10,
     borderWidth: 1,
