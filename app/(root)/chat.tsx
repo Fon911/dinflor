@@ -1,10 +1,11 @@
+import Chat from "@/components/comp/chat";
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 
 const chat = () => {
   return (
-    <View>
-      <Text>chat</Text>
+    <View className="flex-1 bg-white">
+      <Chat />
     </View>
   );
 };

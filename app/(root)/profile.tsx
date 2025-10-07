@@ -29,6 +29,7 @@ const Profile = () => {
         router.push("/(profile)/waitlist");
       },
     },
+
     {
       title: "События",
       onPress: () => {
@@ -44,9 +45,9 @@ const Profile = () => {
       },
     },
     {
-      title: "Правовые документы",
+      title: "Уведомления",
       onPress: () => {
-        console.log("Открыть документы");
+        router.push("/(profile)/notice");
       },
     },
     {

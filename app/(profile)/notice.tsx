@@ -1,11 +1,12 @@
+import Notice from "@/components/comp/notice";
+import GenLayout from "@/components/layout/Genlayout";
 import React from "react";
-import { Text, View } from "react-native";
 
 const notice = () => {
   return (
-    <View>
-      <Text>notice</Text>
-    </View>
+    <GenLayout pageName="Уведомления" backArrow>
+      <Notice />
+    </GenLayout>
   );
 };
 
