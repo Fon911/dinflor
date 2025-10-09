@@ -1,12 +1,8 @@
+import Collection from "@/components/comp/collection";
 import React from "react";
-import { Text, View } from "react-native";
 
 const collections = () => {
-  return (
-    <View>
-      <Text>collections</Text>
-    </View>
-  );
+  return <Collection />;
 };
 
 export default collections;
