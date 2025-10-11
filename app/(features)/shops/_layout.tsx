@@ -1,6 +1,6 @@
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import React from "react";
+import { Image } from "react-native";
 
 const _layout = () => {
   return (
@@ -8,7 +8,8 @@ const _layout = () => {
       screenOptions={({ route }) => ({
         headerShown: false,
         tabBarActiveTintColor: route.name === "reviews" ? "#fff" : "#000",
-        tabBarInactiveTintColor: "#A4A3A3",
+        tabBarInactiveTintColor:
+          route.name === "reviews" ? "#BDBDBD" : "#A4A3A3",
         tabBarStyle: {
           backgroundColor: route.name === "reviews" ? "#1E1E1E" : "#fff",
         },
@@ -18,62 +19,96 @@ const _layout = () => {
         },
       })}
     >
+      {/* Товары */}
       <Tabs.Screen
         name="[id]"
         options={{
           title: "Товары",
-          tabBarIcon: ({ color }) => (
-            <MaterialIcons name="inventory-2" size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="about"
-        options={{
-          title: "О нас",
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons
-              name={
-                focused ? "information-circle" : "information-circle-outline"
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/serva.png")
+                  : require("@/assets/IconTabs/serv.png")
               }
-              size={24}
-              color={focused ? "#fff" : color}
-              style={{
-                backgroundColor: focused ? "#2F2F2F" : "transparent",
-                borderRadius: 100,
-                padding: 4,
-              }}
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
             />
           ),
         }}
       />
+
+      {/* О нас */}
+      <Tabs.Screen
+        name="about"
+        options={{
+          title: "О нас",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/abouta.png")
+                  : require("@/assets/IconTabs/about.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
+          ),
+        }}
+      />
+
+      {/* Обзоры */}
       <Tabs.Screen
         name="reviews"
         options={{
           title: "Обзоры",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="videocam-outline" size={23} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/reva.png")
+                  : require("@/assets/IconTabs/rev.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
+
+      {/* Написать */}
       <Tabs.Screen
         name="chat"
         options={{
           title: "Написать",
-          tabBarIcon: ({ color }) => (
-            <Ionicons name="chatbox-ellipses-outline" size={23} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/mesa.png")
+                  : require("@/assets/IconTabs/mes.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
+
+      {/* Отзывы */}
       <Tabs.Screen
         name="feedback"
         options={{
-          title: "Отзовы",
-          tabBarIcon: ({ color }) => (
-            <Ionicons
-              name="ellipsis-horizontal-circle-outline"
-              size={24}
-              color={color}
+          title: "Отзывы",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/fba.png")
+                  : require("@/assets/IconTabs/fb.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
             />
           ),
         }}

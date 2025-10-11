@@ -1,6 +1,6 @@
-import { Ionicons } from "@expo/vector-icons"; // иконки из Expo
 import { Tabs } from "expo-router";
 import React from "react";
+import { Image } from "react-native";
 
 const _layout = () => {
   return (
@@ -9,7 +9,6 @@ const _layout = () => {
         headerShown: false,
         tabBarActiveTintColor: "#000",
         tabBarInactiveTintColor: "#A4A3A3",
-
         tabBarStyle: {
           backgroundColor: "#fff",
         },
@@ -19,52 +18,97 @@ const _layout = () => {
         },
       }}
     >
+      {/* Главная */}
       <Tabs.Screen
         name="home"
         options={{
           title: "Главная",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home-outline" size={25} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="collections"
-        options={{
-          title: "Подборки",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="heart-outline" size={25} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="order"
-        options={{
-          title: "Корзина",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="cart-outline" size={25} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="chat"
-        options={{
-          title: "Сообщения",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons
-              name="chatbubble-ellipses-outline"
-              size={25}
-              color={color}
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/homea.png")
+                  : require("@/assets/IconTabs/home.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
             />
           ),
         }}
       />
+
+      {/* Подборки */}
+      <Tabs.Screen
+        name="collections"
+        options={{
+          title: "Подборки",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/cola.png")
+                  : require("@/assets/IconTabs/col.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
+          ),
+        }}
+      />
+
+      {/* Корзина */}
+      <Tabs.Screen
+        name="order"
+        options={{
+          title: "Корзина",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/order.png")
+                  : require("@/assets/IconTabs/order.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
+          ),
+        }}
+      />
+
+      {/* Сообщения */}
+      <Tabs.Screen
+        name="chat"
+        options={{
+          title: "Сообщения",
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/messagea.png")
+                  : require("@/assets/IconTabs/message.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
+          ),
+        }}
+      />
+
+      {/* Профиль */}
       <Tabs.Screen
         name="profile"
         options={{
           title: "Профиль",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person-outline" size={25} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={
+                focused
+                  ? require("@/assets/IconTabs/profilea.png")
+                  : require("@/assets/IconTabs/profile.png")
+              }
+              style={{ width: 25, height: 25 }}
+              resizeMode="contain"
+            />
           ),
         }}
       />

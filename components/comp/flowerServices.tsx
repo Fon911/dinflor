@@ -41,14 +41,14 @@ const FlowerServices = () => {
     "Нежно Розовый букет из Французских Роз 11 шт. Букет F146 Звездопад";
 
   return (
-    <View className="flex bg-white">
+    <View className="flex bg-white ">
       {/* Контент */}
       <ScrollView
         contentContainerStyle={{ paddingBottom: 120 }} // чтобы кнопки не перекрывали текст
       >
         <View className="flex bg-white">
           {/* Верхняя панель */}
-          <View className="flex flex-row items-center justify-between px-4 absolute top-8 left-0 right-0 z-10">
+          <View className="flex flex-row items-center mt-[40px] justify-between px-4 absolute top-8 left-0 right-0 z-10">
             {/* Левая кнопка (назад) */}
             <TouchableOpacity onPress={handleClose}>
               <Image
